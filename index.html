@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grabador de Video</title>
+    <style>
+        #video {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+        }
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" autoplay></video>
+    <div id="controls">
+        <label for="cameraSelect">Camera:</label>
+        <select id="cameraSelect"></select>
+        <label for="microphoneSelect">Microphone:</label>
+        <select id="microphoneSelect"></select>
+        <button id="start">Start Recording</button>
+        <button id="stop" disabled>Stop Recording</button>
+        <button id="screen">Share Screen</button>
+        <a id="download" style="display: none;">Stop Recording</a>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
