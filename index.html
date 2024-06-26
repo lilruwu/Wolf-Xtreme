@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grabador de Video</title>
-    <style>
-        #video {
-            width: 80%;
-            margin: 0 auto;
-            display: block;
-        }
-        #controls {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Video Recorder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <video id="video" autoplay></video>
-    <div id="controls">
-        <label for="cameraSelect">Camera:</label>
-        <select id="cameraSelect"></select>
-        <label for="microphoneSelect">Microphone:</label>
-        <select id="microphoneSelect"></select>
-        <button id="start">Start Recording</button>
-        <button id="stop" disabled>Stop Recording</button>
-        <button id="screen">Share Screen</button>
-        <a id="download" style="display: none;">Stop Recording</a>
+    <div class="container">
+        <h1>Video Recorder</h1>
+        <div class="video-container">
+            <video id="screenVideo" autoplay></video>
+            <video id="cameraVideo" autoplay muted></video>
+        </div>
+        <div id="controls">
+            <!-- <div class="select-group">
+                <label for="cameraSelect">Camera:</label>
+                <select id="cameraSelect"></select>
+            </div> -->
+            <div class="select-group">
+                <label for="microphoneSelect">Microphone:</label>
+                <select id="microphoneSelect"></select>
+            </div>
+            <div class="select-group">
+                <!-- <label for="positionSelect">Camera Position:</label>
+                <select id="positionSelect">
+                    <option value="top-left">Top Left</option>
+                    <option value="top-right">Top Right</option>
+                    <option value="bottom-left">Bottom Left</option>
+                    <option value="bottom-right">Bottom Right</option>
+                </select> -->
+            </div>
+            <div class="button-group">
+                <button id="start">Start Recording</button>
+                <button id="stop" disabled>Stop Recording</button>
+                <button id="screen">Share Screen</button>
+            </div>
+            <a id="download" class="button" style="display: none;">Download Recording</a>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

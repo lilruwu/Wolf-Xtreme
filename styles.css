@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#screenVideo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: #000;
+}
+
+#cameraVideo {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.select-group, .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#start {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#start:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+#stop {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#stop:hover:not(:disabled) {
+    background-color: #c82333;
+}
+
+#screen {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#screen:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#download {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#download:hover {
+    background-color: #138496;
+}
